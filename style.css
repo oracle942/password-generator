@@ -1,28 +1,32 @@
+
+/* Sets universal padding and border format */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-html,
-body,
+/* Sets wrapper styling  */
 .wrapper {
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
+/* Sets body styling */
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
 }
 
+/* Sets wrapper styling */
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
+/* Sets header styling */
 header {
   text-align: center;
   padding: 20px;
@@ -30,6 +34,7 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+/* Sets card styling */
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -42,6 +47,7 @@ header {
   padding: 30px 40px;
 }
 
+/* Cosmetic line above card body */
 .card-header::after {
   content: " ";
   display: block;
@@ -49,6 +55,7 @@ header {
   background: #e7e9eb;
   height: 2px;
 }
+
 
 .card-body {
   min-height: 100px;
@@ -58,6 +65,7 @@ header {
   text-align: center;
 }
 
+/* Cosmetic line below card body */
 .card-footer::before {
   content: " ";
   display: block;
@@ -66,12 +74,14 @@ header {
   height: 2px;
 }
 
+/* Unclear. Clear referencing floating items not present. */
 .card-footer::after {
   content: " ";
   display: block;
   clear: both;
 }
 
+/* Button styling */
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -88,15 +98,18 @@ header {
   cursor: pointer;
 }
 
-button[disabled] {
+/* Button styling and functionality */
+button[:disabled] {
   cursor: default;
   background: #c0c7cf;
 }
 
-.float-right {
+/* commented out as no items floated */
+/* .float-right {  
   float: right;
-}
+} */
 
+/* textarea styling  */
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -104,7 +117,7 @@ button[disabled] {
   border: none;
   display: block;
   width: 100%;
-  padding-top: 15px;
+  padding: 15px;
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 85px;
@@ -118,6 +131,8 @@ button[disabled] {
   overflow: hidden;
 }
 
+
+/* first media query */
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
@@ -130,6 +145,7 @@ button[disabled] {
   }
 }
 
+/* second media query */
 @media (max-width: 500px) {
   .btn {
     font-size: 0.8rem;
