@@ -15,6 +15,7 @@
 
 /* Sets body styling */
 body {
+
   font-family: sans-serif;
   background-color: #f9fbfd;
 }
@@ -105,9 +106,9 @@ button[:disabled] {
 }
 
 /* commented out as no items floated */
-/* .float-right {  
+.float-right {  
   float: right;
-} */
+}
 
 /* textarea styling  */
 #password {
