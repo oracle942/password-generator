@@ -1,72 +1,105 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var passwordArray = [];
-
-// Add event listener to generate button
-if(generateBtn){
-    generateBtn.addEventListener("click", () => {
-        var lengthInput = +length;
-        var symbolsInput =  symbols;
-        var upperInput = uppercase;
-        var lowerInput = lowercase;
-        var numbersInput = numbers;
-
-    console.log(lengthInput, symbolsInput, upperInput, lowerInput, numbersInput);
-  })
-};
+var password = '';
 
 
-
-const randomFunc = { 
-  lower: getRandomLower,
-  upper: getRandomUpper,
-  number: getRandomNumber,
-  symbol: getRandomSymbol,
-}
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
-var length = prompt ("Please choose a password length between 8 and 128 characters", "Enter number between 8 and 128");
-var symbols =  confirm ("Should the password contain special characters?");
-var lowercase =  confirm ("Should the password contain lowercase characters?");
-var uppercase =  confirm ("Should the password contain uppercase characters?");
-var numbers =  confirm ("Should the password contain numbers?");
-
-// // Test for correct length user input
-// if (length < 8 || length > 128 || length !== int) {
-//   alert ("Please enter a number between 8 and 128");
-
-
-
-function getRandomLower() {
-	return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-}
-
-function getRandomUpper() {
-	return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-}
-
-function getRandomNumber() {
-	return +String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-}
-
-function getRandomSymbol() {
+  function getRandomSymbol() {
 	const symbols = '!@#$%^&*(){}[]=<>/,.+-_|:;?~`'
-	return symbols[Math.floor(Math.random() * symbols.length)];
+	  return symbols[Math.floor(Math.random() * symbols.length)]};
+
+
+  function getRandomLower() {
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+  }
+
+  function getRandomUpper() {
+	  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+}
+
+  function getRandomNumber() {
+	  return +String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+}
+  
+                      
+  
+if(generateBtn){
+    
+    generateBtn.addEventListener("click", () => {
+    var length = prompt ("Please choose a password length between 8 and 128 characters", "Enter number between 8 and 128");
+    length = +length;
+    
+    if (!length){
+      return;}
+  
+    if (length < 8 || length > 128 || !Number.isInteger(length)) {
+      window.alert ("Please enter a number between 8 and 128");}
+
+    else{
+    var symbols =  confirm ("Should the password contain special characters?");
+    var lowercase =  confirm ("Should the password contain lowercase characters?");
+    var uppercase =  confirm ("Should the password contain uppercase characters?");
+    var numbers =  confirm ("Should the password contain numbers?");
+    var inputCount = symbols + lowercase + uppercase + numbers;
+    var charGenArray = [];
+    
+
+    if(inputCount === 0) {
+      window.alert("Please affirm at least one selection.")
+      return;}
+
+    if(symbols === true){
+      charGenArray.push(getRandomSymbol());}
+    if(lowercase === true){
+      charGenArray.push(getRandomLower());}
+    if(uppercase === true){
+      charGenArray.push(getRandomUpper());}
+    if(numbers === true){
+      charGenArray.push(getRandomNumber());}
+
+      
+      
+      
+      
+      
+      console.log(charGenArray);
+    
+      
+    
+    
+    
+    
+    
+      
+   
+      
+      
+    //   // create a loop
+    //   for(let i=0; i<length; i+=typesCount) {
+    //     typesArr.forEach(type => {
+    //       const funcName = Object.keys(type)[0];
+    //       generatedPassword += randomFunc[funcName]();
+    //     });
+    //   }
+      
+      
+    }     
+    
+    
+
+
+  })
 }
 
 
+// function writePassword() {
+//  getRandomAF1 = password;
+//  return
+// }
 
-// function confirmInput() {
-//   var trueFalse;
-//   if (confirm()) {
-//     bool = true;
-//   } else {
-//     bool = false;
-//   }
+// // function confirmInput() {
+// //   var trueFalse;
+// //   if (confirm()) {
+// //     bool = true;
+// //   } else {
+// //     bool = false;
+// //   }
