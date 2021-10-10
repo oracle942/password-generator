@@ -1,9 +1,8 @@
 # password-generator
 
 ## Description
-This is a repository for a password generator application.
 
-It is meant to provide a unique random password to each user's specifications. 
+This password generator is meant to provide a unique random password to each user's specifications. 
 This project is part of an ongoing series of projects required for completion of the UCLA Extension Coding Bootcamp.
 This project presented a variety of Javascript lerning opportunities including implementation of for loops, if statements, random character generation, splicing, joining, conditionals, array manipulation, window prompts and confirms.
 
