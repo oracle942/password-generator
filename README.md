@@ -17,4 +17,4 @@ Users can press the "Generat Password" button to run the application.
 ![password generator app screenshot](/screenshot.PNG)
 
 ## Credits
-The code for this application was written entirely by me with help from online resources. 
+The code for this application was written entirely by the author. 
